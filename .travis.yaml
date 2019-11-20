@@ -4,7 +4,7 @@ addons:
   sonarcloud:
     organization: "choctache"
     token:
-      secure: "**************************" # encrypted value of your token
+      secure: "1a193c0277354646a87264abc2a97109f5e23e60" # encrypted value of your token
 
 script:
   - ./gradlew sonarqube
