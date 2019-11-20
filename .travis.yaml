@@ -1,0 +1,18 @@
+language: java
+plugins {
+  id "org.sonarqube" version "2.8"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "Choctache_devOps"
+  }
+}
+addons:
+  sonarcloud:
+    organization: "choctache"
+    token:
+      secure: "**************************" # encrypted value of your token
+
+script:
+  - ./gradlew sonarqube
