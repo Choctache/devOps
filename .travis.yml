@@ -4,6 +4,11 @@ jobs:
   include:
     - stage: CodeQuality
       script: ./gradlew sonarqube
+    - stage: Docker
+      if: branch = master
+      script: ./gradlew dockerPush
+      before_script:
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 addons:
   sonarcloud:
