@@ -54,7 +54,7 @@ docker {
 	name 'choctache/devops'
 	tags 'latest'
 	dockerfile file('Dockerfile')
-	files war.archiveFile
+	files 'gugus.txt'
 	pull true
 	noCache true
 }
@@ -65,5 +65,4 @@ heroku {
 	)
 }
 
-docker.dependsOn bootWar
 
