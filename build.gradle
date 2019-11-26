@@ -7,6 +7,9 @@ plugins {
 
 	//Docker
 	id "com.palantir.docker" version "0.22.1"
+
+	//Heroku
+	id "com.heroku.sdk.heroku-gradle" version "1.0.4"
 }
 
 group = 'ch.noseryoung'
@@ -43,6 +46,10 @@ docker {
 	files war.archiveFile
 	pull true
 	noCache true
+}
+
+heroku {
+	appName = "HerokuAppDeploy"
 }
 
 docker.dependsOn bootWar
