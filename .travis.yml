@@ -15,6 +15,10 @@ addons:
     organization: $SONAR_USER
     token:
       secure: $SONAR_TOKEN
+  deploy:
+    provider: heroku
+    api_key:
+      secure: $HEROKU_TOKEN
 
 jdk:
   - openjdk11
