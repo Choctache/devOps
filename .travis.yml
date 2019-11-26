@@ -9,16 +9,17 @@ jobs:
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
     - stage: Heroku
       if: branch = master
-      deploy:
-        provider: heroku
-        api_key:
-          secure: $HEROKU_API_KEY
 
 addons:
   sonarcloud:
     organization: $SONAR_USER
     token:
       secure: $SONAR_TOKEN
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: $HEROKU_API_KEY
 
 jdk:
   - openjdk11
