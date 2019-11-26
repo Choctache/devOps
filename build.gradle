@@ -54,7 +54,7 @@ docker {
 	name 'choctache/devops'
 	tags 'latest'
 	dockerfile file('Dockerfile')
-	files 'gugus.txt'
+	files bootJar.archivePath
 	pull true
 	noCache true
 }
