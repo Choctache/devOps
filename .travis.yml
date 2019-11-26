@@ -2,8 +2,6 @@ language: java
 
 jobs:
   include:
-    - stage: CodeQuality
-      script: ./gradlew sonarqube
     - stage: Docker
       if: branch = master
       script: ./gradlew dockerPush

@@ -49,7 +49,6 @@ docker {
 }
 
 heroku {
-	appName = "HerokuAppDeploy"
 	processTypes(
 			web: "java -jar build/libs/my-app.jar"
 	)
